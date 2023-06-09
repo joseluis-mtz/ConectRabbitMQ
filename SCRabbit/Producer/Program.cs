@@ -17,6 +17,8 @@ namespace Producer
             var Fabrica = new ConnectionFactory
             {
                 HostName = "localhost",
+                UserName = "sa",
+                Password = "SAsa123$",
             };
 
             // Usar la conexion
