@@ -28,17 +28,20 @@ namespace Consumer
             {
                 objCanal.QueueDeclare("ColaUno", false, false, false, null);
                 var Consumer = new EventingBasicConsumer(objCanal);
-                Consumer.Received += (modelo, ea) => {
+                Consumer.Received += (model, ea) =>
+                {
                     // ea -> Representacion del objeto mensaje que viene dentro del Queue
                     var Cuerpo = ea.Body.ToArray();
                     // Convertir el mensaje a texto
                     var Mensaje = Encoding.UTF8.GetString(Cuerpo);
                     Console.WriteLine("Mensaje recibido {0}", Mensaje);
                 };
+
                 // El true lo consume para que no quede en cola
                 objCanal.BasicConsume("ColaUno", true, Consumer);
+                Console.WriteLine("ENTER");
+                Console.ReadLine();
             }
-            Console.ReadKey();
         }
     }
 }

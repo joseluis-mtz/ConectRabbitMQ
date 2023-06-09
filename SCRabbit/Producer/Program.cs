@@ -32,7 +32,7 @@ namespace Producer
                 objCanal.BasicPublish("", "ColaUno", null, Cuerpo);
                 Console.WriteLine("Mensaje enviado");
             }
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }
