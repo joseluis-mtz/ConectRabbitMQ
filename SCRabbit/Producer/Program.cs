@@ -10,6 +10,8 @@ namespace Producer
     {
         static void Main(string[] args)
         {
+            // Este es el SENDER-MENSAJERO
+
         }
     }
 }
